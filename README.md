@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Tampermonkey](https://img.shields.io/badge/Tampermonkey-Compatible-green.svg)](https://www.tampermonkey.net/)
 [![Steam](https://img.shields.io/badge/Steam-Community-blue.svg)](https://steamcommunity.com/)
+[![Greasyfork](https://img.shields.io/badge/Greasyfork-Install-red.svg)](https://greasyfork.org/pt-BR/scripts/540752-steam-rep4rep-comment-to-friends)
 
 *[Português](#português) | [English](#english)*
 
@@ -31,7 +32,7 @@ A userscript that adds bulk commenting functionality to Steam friends page. Sele
    - [Violentmonkey](https://violentmonkey.github.io/)
 
 2. **Install the script**:
-   - Click [here to install from Greasyfork](https://greasyfork.org/scripts/YOUR_SCRIPT_ID)
+   - Click [here to install from Greasyfork](https://greasyfork.org/pt-BR/scripts/540752-steam-rep4rep-comment-to-friends)
    - Or copy the script from `rep4rep.js` and paste it into your userscript manager
 
 3. **Navigate to Steam**:
@@ -48,7 +49,7 @@ A userscript that adds bulk commenting functionality to Steam friends page. Sele
 
 ### 📸 Screenshots
 
-*Interface automatically adapts to your Steam language settings*
+> Interface automatically adapts to your Steam language settings
 
 ### ⚠️ Important Notes
 
@@ -106,7 +107,7 @@ Um userscript que adiciona funcionalidade de comentários em massa na página de
    - [Violentmonkey](https://violentmonkey.github.io/)
 
 2. **Instale o script**:
-   - Clique [aqui para instalar do Greasyfork](https://greasyfork.org/scripts/YOUR_SCRIPT_ID)
+   - Clique [aqui para instalar do Greasyfork](https://greasyfork.org/pt-BR/scripts/540752-steam-rep4rep-comment-to-friends)
    - Ou copie o script de `rep4rep.js` e cole no seu gerenciador de userscripts
 
 3. **Navegue para o Steam**:
@@ -123,7 +124,7 @@ Um userscript que adiciona funcionalidade de comentários em massa na página de
 
 ### 📸 Capturas de Tela
 
-*A interface se adapta automaticamente às configurações de idioma do seu Steam*
+> A interface se adapta automaticamente às configurações de idioma do seu Steam
 
 ### ⚠️ Notas Importantes
 

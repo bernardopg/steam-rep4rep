@@ -2,7 +2,7 @@
 // @name         Steam Rep4Rep - Comment to Friends
 // @name:pt      Steam Rep4Rep - Comentar em Amigos
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Add the ability to comment on multiple friends' profiles at once on Steam friends page. Select friends with checkboxes and post comments in bulk with customizable delay between posts.
 // @description:pt Adiciona a funcionalidade de comentar em múltiplos amigos na página de amigos do Steam. Selecione amigos com checkboxes e poste comentários em lote com delay personalizável entre posts.
 // @author       bernardopg
@@ -17,8 +17,8 @@
 // @license      MIT
 // @homepage     https://github.com/bernardopg/steam-rep4rep
 // @supportURL   https://github.com/bernardopg/steam-rep4rep/issues
-// @updateURL    https://greasyfork.org/scripts/YOUR_SCRIPT_ID/code/Steam%20Rep4Rep%20-%20Comment%20to%20Friends.meta.js
-// @downloadURL  https://greasyfork.org/scripts/YOUR_SCRIPT_ID/code/Steam%20Rep4Rep%20-%20Comment%20to%20Friends.user.js
+// @updateURL    https://greasyfork.org/scripts/540752/code/Steam%20Rep4Rep%20-%20Comment%20to%20Friends.meta.js
+// @downloadURL  https://greasyfork.org/scripts/540752/code/Steam%20Rep4Rep%20-%20Comment%20to%20Friends.user.js
 // ==/UserScript==
 
 (function () {
