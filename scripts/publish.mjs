@@ -18,12 +18,19 @@ const existing = spawnSync(
   ['release', 'view', tag, '--json', 'isDraft'],
   { encoding: 'utf8' },
 );
-const assets = (await readdir('dist')).map((file) => `dist/${file}`);
+const files = [
+  'rep4rep.user.js',
+  'rep4rep.meta.js',
+  'README.md',
+  'LICENSE',
+  'SHA256SUMS',
+];
+const assets = files.map((file) => `dist/${file}`);
 if (existing.status === 0 && !JSON.parse(existing.stdout).isDraft) {
   const directory = await mkdtemp(join(tmpdir(), 'rep4rep-release-'));
   try {
     gh(['release', 'download', tag, '--dir', directory]);
-    for (const file of await readdir('dist')) {
+    for (const file of files) {
       assert.deepEqual(
         await readFile(join(directory, file)),
         await readFile(`dist/${file}`),

@@ -108,7 +108,7 @@ await send('push', {
 for (let attempt = 0; attempt < 12; attempt++) {
   if ((await publicVersion()) === version) {
     const response = await fetch(
-      `https://update.greasyfork.org/scripts/540752/Steam%20Rep4Rep%20-%20Comment%20to%20Friends.user.js?version=${version}`,
+      'https://update.greasyfork.org/scripts/540752/Steam%20Rep4Rep%20-%20Comment%20to%20Friends.user.js',
       { signal: AbortSignal.timeout(30000) },
     );
     assert(response.ok, `Published code returned HTTP ${response.status}`);
