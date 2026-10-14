@@ -109,7 +109,10 @@ for (let attempt = 0; attempt < 12; attempt++) {
   if ((await publicVersion()) === version) {
     const response = await fetch(
       'https://update.greasyfork.org/scripts/540752/Steam%20Rep4Rep%20-%20Comment%20to%20Friends.user.js',
-      { signal: AbortSignal.timeout(30000) },
+      {
+        signal: AbortSignal.timeout(30000),
+        headers: { 'Cache-Control': 'no-cache' },
+      },
     );
     assert(response.ok, `Published code returned HTTP ${response.status}`);
     const normalize = (source) =>
@@ -117,16 +120,18 @@ for (let attempt = 0; attempt < 12; attempt++) {
         .replace(/\r\n/g, '\n')
         .replace(/^\/\/ @(?:updateURL|downloadURL)[\t ]+.*\n/gm, '')
         .trim();
-    assert.equal(
-      normalize(await response.text()),
-      normalize(await readFile('rep4rep.user.js', 'utf8')),
-      'Published Greasy Fork code differs from the release',
-    );
-    console.log(
-      `Greasy Fork script 540752 confirmed at v${version}; code and README synchronization acknowledged.`,
-    );
-    process.exit(0);
+    if (
+      normalize(await response.text()) ===
+      normalize(await readFile('rep4rep.user.js', 'utf8'))
+    ) {
+      console.log(
+        `Greasy Fork script 540752 confirmed at v${version}; code and README synchronization acknowledged.`,
+      );
+      process.exit(0);
+    }
   }
   await sleep(10000);
 }
-throw Error(`Greasy Fork did not publish v${version} within two minutes`);
+throw Error(
+  `Greasy Fork did not serve the exact v${version} release code within the verification window`,
+);
