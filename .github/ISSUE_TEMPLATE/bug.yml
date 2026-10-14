@@ -1,0 +1,25 @@
+name: Bug report
+description: Report a reproducible defect with synthetic data
+body:
+  - type: markdown
+    attributes:
+      value: 'Do not include session tokens, cookies or friends’ personal data. Report vulnerabilities privately through SECURITY.md.'
+  - type: input
+    id: version
+    attributes:
+      label: Userscript version
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and userscript manager versions
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include expected behavior and actual behavior. Use fictitious names and IDs.
+    validations:
+      required: true

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rep4Rep local test fixture</title>
+  <style>
+    body {
+      background: #101923;
+      color: #d7e2ec;
+      font: 14px Arial;
+      margin: 16px;
+    }
+    .friends_content {
+      max-width: 920px;
+      margin: auto;
+    }
+    .friend_block_v2 {
+      min-height: 54px;
+      margin: 8px 0;
+      padding: 12px;
+      background: #25364a;
+    }
+    a {
+      color: #c5e4fa;
+    }
+  </style>
+  <div class="friends_content">
+    <div class="friend_block_v2" data-steamid="76561198000000001">
+      <a href="#alice" class="friend_block_content">Alice</a>
+    </div>
+    <div class="friend_block_v2" data-steamid="76561198000000002">
+      <a href="#bruno" class="friend_block_content">Bruno</a>
+    </div>
+    <div class="friend_block_v2" data-steamid="76561198000000003">
+      <a href="#carol" class="friend_block_content">Carol</a>
+    </div>
+  </div>
+  <script>
+    window.g_sessionID = 'local-test-session';
+  </script>
+  <script src="/rep4rep.user.js"></script>
+</html>

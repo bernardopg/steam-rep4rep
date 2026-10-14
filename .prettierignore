@@ -1,0 +1,9 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+package-lock.json
+docs/audit/
+docs/review-2026-10-14.md
+docs/research-2026-10-14.md
+tests/review/
