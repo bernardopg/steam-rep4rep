@@ -1,9 +1,16 @@
 import assert from 'node:assert/strict';
 import { createHmac } from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
+import timers from 'node:timers/promises';
+import { syncBuiltinESMExports } from 'node:module';
 
 const calls = [];
 const scenario = process.env.WEBHOOK_SCENARIO;
+timers.setTimeout = async (milliseconds) => {
+  assert.equal(milliseconds, 10000);
+  calls.push({ sleep: milliseconds });
+};
+syncBuiltinESMExports();
 const { version: desiredVersion } = JSON.parse(
   await readFile('package.json', 'utf8'),
 );
@@ -29,7 +36,11 @@ globalThis.fetch = async (url, options = {}) => {
     await writeFile(process.env.WEBHOOK_EVIDENCE, JSON.stringify(calls));
     const source = await readFile('rep4rep.user.js', 'utf8');
     return new Response(
-      scenario === 'different-code' ? 'different code' : source,
+      scenario === 'different-code' ||
+        (scenario === 'stale-code' &&
+          calls.filter((call) => call.code).length === 1)
+        ? 'different code'
+        : source,
     );
   }
   assert.equal(

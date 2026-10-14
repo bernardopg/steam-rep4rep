@@ -2,7 +2,7 @@
 // @name         Steam Rep4Rep - Comment to Friends
 // @name:pt      Steam Rep4Rep - Comentar em Amigos
 // @namespace    http://tampermonkey.net/
-// @version      1.2.0
+// @version      1.2.1
 // @description  Review visible friends and post comments sequentially, with progress, cancellation and a configurable interval.
 // @description:pt Revise os amigos visíveis e envie comentários em sequência, com progresso, interrupção e intervalo configurável.
 // @author       bernardopg

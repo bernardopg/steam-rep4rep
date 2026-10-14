@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1 — 2026-10-14
+
+- Wait for Greasy Fork download propagation as well as the public API version before completing release verification.
+- Keep failure logs concise and verify the canonical download without selecting a historical version.
+- Update development formatting tools and pin the tested Ubuntu runner image.
+
 ## 1.2.0 — 2026-10-14
 
 - Select only visible search results and review named recipients before sending.

@@ -45,7 +45,7 @@ Release publication and distribution stay in one workflow. A release created wit
 
 The workflow requires distribution secrets before publishing. A failed CI or tag check publishes nothing. A draft can be retried; its assets are completed before publication. Once published, assets are never overwritten: a rerun compares them byte-for-byte and then retries distribution only. A mismatch requires a new version, not replacing a stable asset.
 
-The synchronization step checks both HTTP and the webhook JSON result. HTTP 200 can still contain `updated_failed`; that is a failure. Repeating the release workflow must not change stable assets or roll back to a previous version.
+The synchronization step checks both HTTP and the webhook JSON result. HTTP 200 can still contain `updated_failed`; that is a failure. The API can report the new version before the download cache serves its code, so verification retries until both version and normalized bytes match. A retry skips the code event when the version is already live, avoiding duplicate release-history entries. Repeating the release workflow must not change stable assets or roll back to a previous version.
 
 If GitHub is published but Greasy Fork fails, fix its source/description settings or the Actions secrets, then rerun the failed release run. Manual dispatch is also available when selecting the existing version tag in the Actions UI. Dispatch on a branch is rejected. Never advance `main`'s source directly into Greasy Fork as a shortcut around release checks.
 

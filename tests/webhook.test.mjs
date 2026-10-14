@@ -65,6 +65,13 @@ test('a distribution retry skips the already published code event', async () => 
   );
 });
 
+test('waits for download propagation after the API already reports the new version', async () => {
+  const result = await invoke('stale-code');
+  assert.equal(result.status, 0, result.stderr);
+  assert.equal(result.calls.filter((call) => call.code).length, 2);
+  assert.equal(result.calls.filter((call) => call.sleep).length, 1);
+});
+
 for (const scenario of [
   'failed',
   'missing',
