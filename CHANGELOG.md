@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.2 — 2026-11-10
+
+- Update the Playwright test runner to 1.65.0.
+- Update the pinned CodeQL Action to v4.39.3.
+- No changes to the userscript's behavior.
+
 ## 1.2.1 — 2026-10-14
 
 - Wait for Greasy Fork download propagation as well as the public API version before completing release verification.
