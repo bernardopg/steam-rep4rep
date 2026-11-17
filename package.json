@@ -1,6 +1,6 @@
 {
   "name": "steam-rep4rep",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": true,
   "type": "module",
   "description": "Steam friends userscript with release-based Greasy Fork distribution",
@@ -16,7 +16,7 @@
     "test:browser": "playwright test"
   },
   "devDependencies": {
-    "@playwright/test": "1.65.0",
-    "prettier": "3.9.10"
+    "@playwright/test": "1.65.1",
+    "prettier": "3.10.1"
   }
 }
