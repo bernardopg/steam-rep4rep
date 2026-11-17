@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.3 — 2026-11-17
+
+- Update Playwright to 1.65.1 and Prettier to 3.10.1.
+- Run CI and release automation on Node.js 26 LTS.
+- No changes to the userscript's behavior.
+
 ## 1.2.2 — 2026-11-10
 
 - Update the Playwright test runner to 1.65.0.
